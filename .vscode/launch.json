@@ -25,7 +25,7 @@
       "runtimeExecutable": "npm",
       "runtimeArgs": ["start"],
       "port": 3000,
-      "env": {
+      "env": { 
         "REACT_APP_CODESPACE_NAME": "${env:CODESPACE_NAME}"
       }
     }
