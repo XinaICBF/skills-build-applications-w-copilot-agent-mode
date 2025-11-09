@@ -1,0 +1,377 @@
+/* OctoFit Tracker - Modern Fitness App Styling */
+/* Color Palette:
+   Primary: #00D9FF (Cyan) & #0066FF (Blue)
+   Secondary: #FF6B35 (Orange) & #FFD23F (Yellow)
+   Success: #06D6A0 (Green)
+   Text: #2B3A67 (Dark Blue)
+*/
+
+/* Global App Styles */
+.App {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #e3f2fd 0%, #f3e5f5 50%, #fff3e0 100%);
+  animation: gradientShift 15s ease infinite;
+}
+
+@keyframes gradientShift {
+  0%, 100% { background: linear-gradient(135deg, #e3f2fd 0%, #f3e5f5 50%, #fff3e0 100%); }
+  50% { background: linear-gradient(135deg, #fff3e0 0%, #e3f2fd 50%, #f3e5f5 100%); }
+}
+
+/* Navbar Styling */
+.navbar {
+  background: linear-gradient(135deg, #0066FF 0%, #00D9FF 100%) !important;
+  box-shadow: 0 4px 12px rgba(0, 102, 255, 0.3);
+  padding: 0.75rem 0;
+}
+
+.navbar-brand {
+  font-weight: 700;
+  font-size: 1.5rem;
+  letter-spacing: 0.5px;
+  color: #ffffff !important;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  transition: all 0.3s ease;
+}
+
+.navbar-brand:hover {
+  transform: scale(1.05);
+}
+
+.navbar-brand img {
+  height: 40px;
+  width: auto;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+}
+
+.nav-link {
+  font-weight: 500;
+  margin: 0 0.5rem;
+  transition: all 0.3s ease;
+  color: rgba(255, 255, 255, 0.9) !important;
+}
+
+.nav-link:hover {
+  transform: translateY(-2px);
+  color: #FFD23F !important;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.nav-link.active {
+  color: #FFD23F !important;
+  font-weight: 700;
+}
+
+/* Page Container */
+.container {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  color: #2B3A67;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  background: linear-gradient(135deg, #0066FF 0%, #00D9FF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+h2 {
+  font-size: 2rem;
+  border-bottom: 4px solid;
+  border-image: linear-gradient(90deg, #0066FF 0%, #00D9FF 50%, #FF6B35 100%) 1;
+  display: inline-block;
+  padding-bottom: 0.5rem;
+  margin-bottom: 2rem;
+  color: #2B3A67;
+}
+
+/* Lead Text */
+.lead {
+  color: #5c6b8f;
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  font-weight: 400;
+}
+
+/* Card Styling */
+.card {
+  border: none;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 102, 255, 0.15);
+  transition: all 0.3s ease;
+  height: 100%;
+  overflow: hidden;
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9ff 100%);
+  border-top: 4px solid transparent;
+  border-image: linear-gradient(90deg, #0066FF, #00D9FF, #06D6A0) 1;
+  border-image-slice: 1;
+}
+
+.card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 12px 24px rgba(0, 102, 255, 0.25);
+}
+
+.card-body {
+  padding: 1.5rem;
+}
+
+.card-title {
+  color: #2B3A67;
+  font-weight: 700;
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.card-text {
+  color: #5c6b8f;
+  line-height: 1.6;
+}
+
+/* Table Styling */
+.table-responsive {
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 6px 16px rgba(0, 102, 255, 0.2);
+  background: white;
+  margin-bottom: 2rem;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}
+
+.table {
+  margin-bottom: 0;
+}
+
+.table thead {
+  background: linear-gradient(135deg, #0066FF 0%, #00D9FF 100%);
+  color: white;
+}
+
+.table thead th {
+  border: none;
+  font-weight: 600;
+  padding: 1rem;
+  text-transform: uppercase;
+  font-size: 0.875rem;
+  letter-spacing: 0.5px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.table tbody tr {
+  transition: all 0.2s ease;
+}
+
+.table tbody tr:hover {
+  background: linear-gradient(90deg, #e3f2fd 0%, #fff3e0 100%);
+  transform: scale(1.005);
+  box-shadow: 0 2px 8px rgba(0, 102, 255, 0.1);
+}
+
+.table tbody td {
+  padding: 1rem;
+  vertical-align: middle;
+  border-color: #e9ecef;
+  color: #2B3A67;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+  background-color: rgba(0, 102, 255, 0.03);
+}
+
+.table-warning {
+  background: linear-gradient(90deg, #fff3cd 0%, #ffe69c 100%) !important;
+}
+
+/* Button Styling */
+.btn {
+  border-radius: 10px;
+  padding: 0.625rem 1.5rem;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  transition: all 0.3s ease;
+  border: none;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #0066FF 0%, #00D9FF 100%);
+  box-shadow: 0 4px 12px rgba(0, 102, 255, 0.4);
+  color: white;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #FF6B35 0%, #FFD23F 100%);
+  box-shadow: 0 6px 16px rgba(255, 107, 53, 0.5);
+  transform: translateY(-3px);
+}
+
+.btn-primary:active {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(0, 102, 255, 0.3);
+}
+
+/* Loading and Error States */
+.container p {
+  font-size: 1.1rem;
+  color: #5c6b8f;
+}
+
+.spinner-border {
+  width: 3rem;
+  height: 3rem;
+  border-width: 0.4rem;
+}
+
+.spinner-border.text-primary {
+  border-color: #00D9FF;
+  border-right-color: transparent;
+}
+
+.alert {
+  border-radius: 12px;
+  border: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.alert-danger {
+  background: linear-gradient(135deg, #fff5f5 0%, #ffe5e5 100%);
+  color: #d32f2f;
+  border-left: 4px solid #FF6B35;
+}
+
+.alert-info {
+  background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+  color: #0066FF;
+  border-left: 4px solid #00D9FF;
+}
+
+.alert-heading {
+  color: inherit;
+  font-weight: 700;
+}
+
+.text-danger {
+  font-weight: 600;
+  background: linear-gradient(135deg, #fff5f5 0%, #ffe5e5 100%);
+  padding: 1rem;
+  border-radius: 12px;
+  border-left: 4px solid #FF6B35;
+}
+
+/* List Group Styling */
+.list-group-item {
+  border: none;
+  padding: 0.75rem 1rem;
+  background: transparent;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.list-group-item:last-child {
+  border-bottom: none;
+}
+
+.list-group-flush {
+  border-radius: 0;
+}
+
+/* Badge Styling */
+.badge {
+  padding: 0.5rem 0.75rem;
+  border-radius: 8px;
+  font-weight: 600;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.badge.bg-primary {
+  background: linear-gradient(135deg, #0066FF 0%, #00D9FF 100%) !important;
+}
+
+.badge.bg-success {
+  background: linear-gradient(135deg, #06D6A0 0%, #1FAB89 100%) !important;
+}
+
+.badge.bg-warning {
+  background: linear-gradient(135deg, #FFD23F 0%, #FFC107 100%) !important;
+}
+
+.badge.bg-danger {
+  background: linear-gradient(135deg, #FF6B35 0%, #FF4757 100%) !important;
+}
+
+.badge.bg-info {
+  background: linear-gradient(135deg, #00D9FF 0%, #4ECDC4 100%) !important;
+}
+
+.badge.bg-secondary {
+  background: linear-gradient(135deg, #6c757d 0%, #5a6268 100%) !important;
+}
+
+/* Home Page Feature Cards */
+.App .container .row .col-md-4 .card {
+  border-top: 4px solid #0d6efd;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+  
+  h2 {
+    font-size: 1.5rem;
+  }
+  
+  .navbar-brand {
+    font-size: 1.25rem;
+  }
+  
+  .card-body {
+    padding: 1rem;
+  }
+  
+  .table thead th,
+  .table tbody td {
+    padding: 0.75rem 0.5rem;
+    font-size: 0.875rem;
+  }
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.container {
+  animation: fadeIn 0.5s ease;
+}
+
+/* Utility Classes */
+.mt-4 {
+  margin-top: 2rem !important;
+}
+
+.mb-4 {
+  margin-bottom: 2rem !important;
+}
